@@ -1,0 +1,25 @@
+.emuse-wrapper {
+  width: 100vw;
+}
+
+.emuse-bg {
+  background: url('../images/fullbg.png') no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+@media all and (max-width: 968px) {
+  .emuse-bg {
+    background-size: contain;
+    height: 50vh;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .emuse-bg {
+    background-size: contain;
+    height: 40vh;
+  }
+}

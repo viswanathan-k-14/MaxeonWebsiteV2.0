@@ -1,0 +1,48 @@
+.image-section-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.image-section-1 img {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.image-about h1 {
+  font-family: Poppins;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 46px;
+  text-align: justify;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.image-about p {
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 30px;
+  text-align: justify;
+  height: 100%;
+  width: 100%;
+}
+
+.image-about {
+  display: flex;
+  flex-direction: column;
+}
+
+@media all and (max-width: 960px) {
+  .image-section-wrapper {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .image-section-1 img {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}

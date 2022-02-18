@@ -1,0 +1,12 @@
+.modal-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  height: 6440px;
+  overflow: none;
+  background: rgba(63, 61, 61, 0.692);
+  z-index: 90;
+}

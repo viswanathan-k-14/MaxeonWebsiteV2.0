@@ -1,0 +1,112 @@
+.info-d-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.image-group {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  flex-direction: column;
+}
+
+.image-container-1 {
+  display: flex;
+  gap: 10px;
+  width: 50%;
+}
+
+.image-container-2 {
+  display: flex;
+  gap: 10px;
+  width: 50%;
+}
+#people1,
+#people2 {
+  width: 400px;
+  height: 200px;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+#people3,
+#people4 {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.info-d-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info-d-2 h1 {
+  font-family: Poppins;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 69px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #6174b9;
+}
+
+.info-d-2 p {
+  font-family: Poppins;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 32px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.play-btn {
+  font-family: Poppins;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 192px;
+  font-size: large;
+  border-radius: 25px;
+  background: #6174b9;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+}
+
+.play-btn img {
+  margin: 10px;
+}
+
+@media all and (max-width: 1020px) {
+  .info-d-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+  .info-d-2 {
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+  }
+  .image-group {
+    width: 100vw;
+    align-items: center;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .image-group {
+    align-items: stretch;
+  }
+  .info-d-2 {
+    width: 100%;
+    align-items: flex-start;
+  }
+}

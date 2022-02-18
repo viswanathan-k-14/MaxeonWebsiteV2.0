@@ -1,0 +1,35 @@
+.info-b {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+.info-b h1,
+p {
+  text-align: center;
+}
+.info-b-wrapper {
+  width: 100vw;
+}
+.info-b h1 {
+  font-family: Poppins;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 64px;
+  text-align: center;
+}
+
+.info-b p {
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 32px;
+  text-align: center;
+}
+
+@media all and (max-width: 600px) {
+  .info-b {
+    margin-top: 0px;
+  }
+}

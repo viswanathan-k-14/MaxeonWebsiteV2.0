@@ -1,0 +1,33 @@
+.info-c-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.info-c-wrapper h1 {
+  font-family: Poppins;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+  text-align: center;
+}
+
+.info-c-wrapper p {
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 32px;
+  text-align: center;
+}
+
+@media all and (max-width: 960px) {
+  .info-c-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  img[alt='arrow'] {
+    transform: rotate(90deg);
+  }
+}
