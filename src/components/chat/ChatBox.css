@@ -31,7 +31,7 @@
 
 .greeting-container h1,
 .conversation h3 {
-  margin-left: 20px;
+  margin-left: 40px;
   padding: 5px;
 }
 
@@ -193,6 +193,12 @@
 
   .message-wrapper:nth-child(even)::after {
     left: 5px;
+  }
+
+  .greeting-container h1,
+  .conversation h3 {
+    margin-left: 20px;
+    padding: 5px;
   }
 
   .chats-area {
