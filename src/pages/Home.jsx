@@ -15,7 +15,7 @@ const Home = () => {
   const [chatOpen, setChatOpen] = useState(false);
 
   return (
-    <>
+    <main>
       <Hero>
         <ChatBox chatOpen={chatOpen} />
         <ChatIcon onClick={() => setChatOpen(!chatOpen)} chatOpen={chatOpen} />
@@ -41,7 +41,7 @@ const Home = () => {
       <div className='divider'></div>
       <InfoE />
       <Footer />
-    </>
+    </main>
   );
 };
 

@@ -9,7 +9,9 @@ const ChatBox = ({ chatOpen }) => {
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     if (loading === true) {
-      messageFromApi();
+      setTimeout(() => {
+        messageFromApi();
+      }, 200);
     }
     //eslint-disable-next-line
   }, [loading]);
@@ -28,14 +30,13 @@ const ChatBox = ({ chatOpen }) => {
     let messageApi = { text: '', id: Date.now(), type: '', loading: true };
     messageApi.type = 'Api';
     setChats([...chats, messageApi]);
-    if (messageApi.type !== '') {
-      setTimeout(() => {
-        messageApi.text = chatData.slip.advice;
-        setChats([...chats, messageApi]);
-        messageApi.loading = false;
-        setLoading(false);
-      }, 2000);
-    }
+
+    setTimeout(() => {
+      messageApi.text = chatData.slip.advice;
+      setChats([...chats, messageApi]);
+      messageApi.loading = false;
+      setLoading(false);
+    }, 2000);
   }
 
   function endChat() {

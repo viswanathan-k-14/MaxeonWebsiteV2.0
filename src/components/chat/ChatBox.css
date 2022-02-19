@@ -174,16 +174,12 @@
 @media all and (max-width: 600px) {
   .chat-box-wrapper {
     left: 38px;
-    width: 350px;
+    width: 300px;
   }
-
   .chat-box-wrapper.chat-lg {
     width: 350px;
-    height: 600px;
+    height: 610px;
     left: 38px;
-  }
-  .chat-input-wrapper {
-    padding: -10px;
   }
   .message-wrapper:nth-child(odd) {
     width: 70%;
@@ -200,5 +196,24 @@
 
   .chats-area {
     width: 350px;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .chat-box-wrapper {
+    left: 38px;
+    width: 300px;
+  }
+  .chat-box-wrapper.chat-lg {
+    width: 300px;
+    left: 38px;
+  }
+  .message-wrapper:nth-child(odd)::after {
+    content: '';
+    left: 170px;
+  }
+
+  .chats-area {
+    width: 300px;
   }
 }

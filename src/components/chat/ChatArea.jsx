@@ -42,25 +42,27 @@ const ChatArea = ({ addChat, chats, loading }) => {
         })}
       </div>
 
-      <form className='chat-input-wrapper'>
-        <input
-          type='text'
-          value={text}
-          placeholder={
-            chats.length === 0 ? 'Send a Message...' : 'Write a reply...'
-          }
-          onChange={handleChatInput}
-        />
+      {!loading && (
+        <form className='chat-input-wrapper'>
+          <input
+            type='text'
+            value={text}
+            placeholder={
+              chats.length === 0 ? 'Send a Message...' : 'Write a reply...'
+            }
+            onChange={handleChatInput}
+          />
 
-        <button
-          type='submit'
-          className='chat-submit'
-          onClick={handleChatSubmit}
-          value=''
-        >
-          <i className='fa-solid fa-paper-plane fa-2x'></i>
-        </button>
-      </form>
+          <button
+            type='submit'
+            className='chat-submit'
+            onClick={handleChatSubmit}
+            value=''
+          >
+            <i className='fa-solid fa-paper-plane fa-2x'></i>
+          </button>
+        </form>
+      )}
     </div>
   );
 };
