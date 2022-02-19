@@ -11,15 +11,14 @@
 }
 
 .form-wrapper {
-  max-width: 500px;
-  min-width: 300px;
+  width: 450px;
   height: 550px;
   margin-top: 120px;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  background: #fff;
+  background: var(--white);
   padding: 20px;
   border-radius: 20px;
 }
@@ -30,7 +29,7 @@
   text-align: left;
   margin-left: 60px;
   padding-bottom: 5px;
-  border-bottom: 5px solid black;
+  border-bottom: 5px solid var(--black);
 }
 .signup-form {
   display: flex;
@@ -41,8 +40,7 @@
 }
 
 .form-cntrl {
-  max-width: 350px;
-  min-width: 300px;
+  width: 300px;
   padding: 20px 35px;
   margin-bottom: 15px;
   height: 20px;
@@ -52,15 +50,15 @@
 }
 
 .form-cntrl:focus {
-  outline-color: #6174b9;
+  outline-color: var(--purple);
 }
 
 .form-submit {
   display: block;
-  width: 350px;
-  background: #6174b9;
+  width: 300px;
+  background: var(--purple);
   cursor: pointer;
-  color: #fff;
+  color: var(--white);
   padding: 10px 30px;
   border: none;
   margin-bottom: 10px;
@@ -78,7 +76,7 @@
   top: 10px;
   right: 20px;
   border: none;
-  background: #fff;
+  background: var(--white);
   cursor: pointer;
 }
 
@@ -89,6 +87,9 @@
 @media all and (max-width: 600px) {
   .form-submit {
     width: 300px;
+  }
+  .form-wrapper {
+    width: 350px;
   }
   .form-wrapper p {
     font-size: 14px;

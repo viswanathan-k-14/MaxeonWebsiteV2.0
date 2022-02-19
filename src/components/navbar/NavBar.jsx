@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Modal from '../modal/Modal';
 import Signup from '../signup/Signup';
@@ -6,6 +6,14 @@ import './NavBar.css';
 const NavBar = () => {
   const [toggle, setToggle] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  useEffect(() => {
+    if (isModalOpen === true) {
+      document.querySelector('body').style.overflow = 'hidden';
+    } else {
+      document.querySelector('body').style.overflow = 'scroll';
+    }
+  }, [isModalOpen]);
   const handleResize = () => {
     if (window.innerWidth >= 960) {
       setToggle(false);
@@ -44,7 +52,7 @@ const NavBar = () => {
             </li>
             <li>
               <Link
-                class='btn signup'
+                className='btn signup'
                 onClick={() => setIsModalOpen(true)}
                 to='/'
               >

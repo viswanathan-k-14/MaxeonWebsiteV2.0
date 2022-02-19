@@ -8,7 +8,7 @@ import Music from '../../images/music.png';
 const InfoD = () => {
   return (
     <article className='info-d-wrapper container'>
-      <div className='image-group'>
+      <section className='image-group'>
         <section className='image-container-1'>
           <img src={People1} id='people1' alt='' />
           <img src={People2} id='people2' alt='' />
@@ -17,7 +17,7 @@ const InfoD = () => {
           <img src={People3} id='people3' alt='' />
           <img src={People4} id='people4' alt='' />
         </section>
-      </div>
+      </section>
       <section className='info-d-2'>
         <h1>
           EVOLVE. <br /> EXPLORE.

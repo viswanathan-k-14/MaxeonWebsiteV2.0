@@ -9,8 +9,8 @@
 }
 
 .image-about h1 {
-  font-family: Poppins;
-  font-size: 36px;
+  font-family: var(--poppins);
+  font-size: 2rem;
   font-style: normal;
   font-weight: 700;
   line-height: 46px;
@@ -20,8 +20,8 @@
 }
 
 .image-about p {
-  font-family: Poppins;
-  font-size: 16px;
+  font-family: var(--poppins);
+  font-size: 1rem;
   font-style: normal;
   font-weight: 300;
   line-height: 30px;

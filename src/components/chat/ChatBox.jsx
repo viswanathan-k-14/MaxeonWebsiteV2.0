@@ -7,6 +7,7 @@ const ChatBox = ({ chatOpen }) => {
   const [chatStart, setChatStart] = useState(false);
   const [chats, setChats] = useState([]);
   const [loading, setLoading] = useState(false);
+
   useEffect(() => {
     if (loading === true) {
       setTimeout(() => {

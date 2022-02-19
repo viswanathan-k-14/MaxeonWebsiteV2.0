@@ -45,20 +45,18 @@
 }
 
 .info-d-2 h1 {
-  font-family: Poppins;
-  font-size: 60px;
-  font-style: normal;
+  font-family: var(--poppins);
+  font-size: 3rem;
   font-weight: 700;
   line-height: 69px;
   letter-spacing: 0px;
   text-align: left;
-  color: #6174b9;
+  color: var(--purple);
 }
 
 .info-d-2 p {
-  font-family: Poppins;
-  font-size: 19px;
-  font-style: normal;
+  font-family: var(--poppins);
+  font-size: 1.2rem;
   font-weight: 300;
   line-height: 32px;
   letter-spacing: 0px;
@@ -66,7 +64,7 @@
 }
 
 .play-btn {
-  font-family: Poppins;
+  font-family: var(--poppins);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -74,8 +72,8 @@
   width: 192px;
   font-size: large;
   border-radius: 25px;
-  background: #6174b9;
-  color: #fff;
+  background: var(--purple);
+  color: var(--white);
   cursor: pointer;
   border: none;
 }

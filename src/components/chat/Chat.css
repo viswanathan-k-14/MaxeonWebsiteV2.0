@@ -7,8 +7,8 @@
 }
 
 .chat-symbol {
-  font-family: Montserrat;
-  font-size: 25px;
+  font-family: var(--montserrat);
+  font-size: 1.5rem;
   font-style: normal;
   font-weight: 700;
   line-height: 20px;
@@ -19,14 +19,14 @@
   position: absolute;
   right: 25px;
   bottom: 55px;
-  color: #6174b9;
+  color: var(--purple);
   cursor: pointer;
 }
 
 .chat-symbol span {
   position: absolute;
-  color: #333;
-  font-size: 35px;
+  color: var(--black);
+  font-size: 1.8rem;
   right: 20px;
 }
 

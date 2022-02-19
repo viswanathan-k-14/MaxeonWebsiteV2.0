@@ -5,18 +5,16 @@
 }
 
 .info-c-wrapper h1 {
-  font-family: Poppins;
-  font-size: 28px;
-  font-style: normal;
+  font-family: var(--poppins);
+  font-size: 1.8rem;
   font-weight: 600;
   line-height: 32px;
   text-align: center;
 }
 
 .info-c-wrapper p {
-  font-family: Poppins;
-  font-size: 18px;
-  font-style: normal;
+  font-family: var(--poppins);
+  font-size: 1.2rem;
   font-weight: 300;
   line-height: 32px;
   text-align: center;
@@ -26,6 +24,9 @@
   .info-c-wrapper {
     flex-direction: column;
     align-items: center;
+  }
+  .info-c-wrapper p {
+    font-size: 1rem;
   }
   img[alt='arrow'] {
     transform: rotate(90deg);

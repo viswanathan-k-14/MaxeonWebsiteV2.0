@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/footer.css';
 const Footer = () => {
   return (
-    <div className='footer-wrapper'>
+    <footer className='footer-wrapper'>
       <div className='container footer'>
         <div className='footer-content'>
           <p>
@@ -13,7 +13,7 @@ const Footer = () => {
         </div>
         <div className='footer-logo'>Maxeon</div>
       </div>
-    </div>
+    </footer>
   );
 };
 

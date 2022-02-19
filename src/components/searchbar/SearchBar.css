@@ -3,7 +3,7 @@
   width: 789px;
   min-width: 350px;
   height: 98px;
-  background: #fff;
+  background: var(--white);
   bottom: -49px;
   left: 50%;
   transform: translateX(-50%);

@@ -10,7 +10,7 @@ const Modal = (props) => {
   if (props.open) {
     return (
       <>
-        <div onClick={handleExit} ref={ref} id='b' className='modal-container'>
+        <div onClick={handleExit} ref={ref} className='modal-container'>
           {props.children}
         </div>
       </>

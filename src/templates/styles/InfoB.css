@@ -11,8 +11,8 @@ p {
   width: 100vw;
 }
 .info-b h1 {
-  font-family: Poppins;
-  font-size: 48px;
+  font-family: var(--poppins);
+  font-size: 3rem;
   font-style: normal;
   font-weight: 700;
   line-height: 64px;
@@ -20,8 +20,8 @@ p {
 }
 
 .info-b p {
-  font-family: Poppins;
-  font-size: 18px;
+  font-family: var(--poppins);
+  font-size: 1rem;
   font-style: normal;
   font-weight: 300;
   line-height: 32px;

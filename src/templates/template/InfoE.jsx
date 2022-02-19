@@ -14,36 +14,36 @@ const InfoE = () => {
           Accusantium doloremque <br /> laudantium
         </h1>
         <section className='quote-wrapper'>
-          <article className='quote'>
+          <section className='quote'>
             <img src={Tick} alt='' />
             <p>
               Neque porro <br />
               quisquam{' '}
             </p>
-          </article>
-          <article className='quote'>
+          </section>
+          <section className='quote'>
             <img src={Tick} alt='' />
             <p>
               Neque porro <br />
               quisquam{' '}
             </p>
-          </article>
+          </section>
         </section>
         <section className='quote-wrapper'>
-          <article className='quote'>
+          <section className='quote'>
             <img src={Tick} alt='' />
             <p>
               Neque porro <br />
               quisquam{' '}
             </p>
-          </article>
-          <article className='quote'>
+          </section>
+          <section className='quote'>
             <img src={Tick} alt='' />
             <p>
               Neque porro <br />
               quisquam{' '}
             </p>
-          </article>
+          </section>
         </section>
       </section>
     </article>

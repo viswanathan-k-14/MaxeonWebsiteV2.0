@@ -5,9 +5,9 @@ import HeroImage from '../../images/hero.png';
 import '../styles/Hero.css';
 const Hero = (props) => {
   return (
-    <>
+    <header>
       <NavBar />
-      <header className='hero-wrapper'>
+      <div className='hero-wrapper'>
         <div className='text-wrapper container'>
           {' '}
           <h1>
@@ -23,8 +23,8 @@ const Hero = (props) => {
         </div>
         <SearchBar />
         {props.children}
-      </header>
-    </>
+      </div>
+    </header>
   );
 };
 

@@ -3,13 +3,14 @@
   flex-direction: column;
   justify-content: space-around;
   position: absolute;
+  overflow: hidden;
   width: 400px;
   height: 300px;
   bottom: 115px;
   right: 80px;
   border-radius: 22px;
-  background: #fff;
-  box-shadow: 0px 0px 10px 0px #333;
+  background: var(--white);
+  box-shadow: 0px 0px 10px 0px var(--black);
 }
 
 .chat-lg {
@@ -21,11 +22,11 @@
 .greeting-container {
   display: flex;
   flex-direction: column;
-  background: #6174b9;
+  background: var(--purple);
   padding: 15px;
   margin: 0px 10px 10px 10px;
   border-radius: 10px;
-  color: #fff;
+  color: var(--white);
 }
 
 .greeting-container h1,
@@ -59,7 +60,7 @@
   border-radius: 20px;
   padding: 5px 20px;
   background: #13a884;
-  color: #fff;
+  color: var(--white);
   border: none;
   align-self: center;
   cursor: pointer;
@@ -90,22 +91,22 @@
 .message-wrapper:nth-child(odd) {
   position: relative;
   align-self: flex-end;
-  background: #4c5aa1;
+  background: var(--darkPurple);
   width: 70%;
   padding: 10px 30px;
   border-radius: 12px;
-  color: #fff;
+  color: var(--white);
   margin-bottom: 20px;
 }
 
 .message-wrapper:nth-child(even) {
   position: relative;
-  background: #a4b0ea;
+  background: var(--lightPurple);
   align-self: flex-start;
   padding: 10px 30px;
   border-radius: 10px;
   width: 70%;
-  color: #333;
+  color: var(--black);
   margin-bottom: 20px;
 }
 
@@ -126,7 +127,7 @@
   left: 89.5%;
   transform: rotate(45deg);
   bottom: -5px;
-  background: #4c5aa1;
+  background: inherit;
 }
 
 .message-wrapper:nth-child(even)::after {
@@ -137,7 +138,7 @@
   right: 90.5%;
   transform: rotate(45deg);
   bottom: -5px;
-  background: #a4b0ea;
+  background: inherit;
 }
 
 .chat-input-wrapper {
@@ -160,10 +161,10 @@
 }
 
 .chat-submit {
-  color: #6174b9;
+  color: var(--purple);
   cursor: pointer;
   border: none;
-  background: #fff;
+  background: var(--white);
   border-radius: 50%;
   width: 20%;
   display: flex;
