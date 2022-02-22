@@ -9,6 +9,10 @@ const ChatBox = ({ chatOpen }) => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    console.log('chat change');
+    console.log(chats);
+  }, [chats]);
+  useEffect(() => {
     if (loading === true) {
       setTimeout(() => {
         messageFromApi();
@@ -34,9 +38,8 @@ const ChatBox = ({ chatOpen }) => {
 
     setTimeout(() => {
       messageApi.text = chatData.slip.advice;
-      chats.pop();
       messageApi.loading = false;
-      chats.push(messageApi);
+      setChats([...chats, messageApi]);
       setLoading(false);
     }, 2000);
   }
