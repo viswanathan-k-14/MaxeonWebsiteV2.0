@@ -39,7 +39,6 @@ const ChatBox = ({ chatOpen }) => {
     setTimeout(() => {
       messageApi.text = chatData.slip.advice;
       messageApi.loading = false;
-      setChats([...chats, messageApi]);
       setLoading(false);
     }, 2000);
   }
