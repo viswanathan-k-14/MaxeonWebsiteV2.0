@@ -5,8 +5,23 @@
   width: 100vw;
   position: absolute;
   top: 0;
-  height: 100vh;
+  height: 200vh;
   overflow: none;
   background: rgba(63, 61, 61, 0.692);
   z-index: 90;
+  transition: top 1s ease-in;
+  animation: overlay 1s ease-in 1 forwards;
+}
+
+@keyframes overlay {
+  0% {
+    top: -200vh;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+.modal-container.modal-close {
+  top: -200vh;
 }

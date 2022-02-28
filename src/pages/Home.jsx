@@ -20,6 +20,7 @@ const Home = () => {
         <ChatBox chatOpen={chatOpen} />
         <ChatIcon Click={() => setChatOpen(!chatOpen)} chatOpen={chatOpen} />
       </Hero>
+
       <div className='divider'></div>
       <InfoA />
       <div className='divider'></div>

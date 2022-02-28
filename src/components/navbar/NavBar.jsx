@@ -25,6 +25,10 @@ const NavBar = () => {
     setToggle(!toggle);
   };
 
+  const closeModal = (e) => {
+    setIsModalOpen(false);
+  };
+
   return (
     <nav className='navbar'>
       <div className='container'>
@@ -71,7 +75,7 @@ const NavBar = () => {
       </div>
       <Modal open={isModalOpen} toggle={() => setIsModalOpen(false)}>
         <Signup>
-          <button className='close' onClick={(e) => setIsModalOpen(false)}>
+          <button className='close' onClick={closeModal}>
             <i className='fa fa-times fa-3x'></i>
           </button>
         </Signup>

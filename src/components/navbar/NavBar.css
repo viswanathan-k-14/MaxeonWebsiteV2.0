@@ -65,6 +65,14 @@
     flex-direction: column;
     align-items: center;
   }
+  @keyframes nav {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 
   .nav-menu {
     display: none;
@@ -72,11 +80,11 @@
   .nav-menu-active {
     display: flex;
     flex-direction: column;
-    transition: all 0.3s ease-in;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
     min-width: 450px;
+    animation: nav 0.3s ease-in 1 forwards;
   }
   .nav-menu-active li {
     text-align: center;
