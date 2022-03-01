@@ -131,26 +131,22 @@
   height: 80px;
 }
 
-.message-wrapper:nth-child(odd)::after {
-  content: '';
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  left: 89.5%;
-  transform: rotate(45deg);
-  bottom: -5px;
-  background: inherit;
-}
-
+.message-wrapper:nth-child(odd)::after,
 .message-wrapper:nth-child(even)::after {
   content: '';
   position: absolute;
   width: 20px;
   height: 20px;
-  right: 90.5%;
+
   transform: rotate(45deg);
   bottom: -5px;
   background: inherit;
+}
+.message-wrapper:nth-child(odd)::after {
+  left: 89.5%;
+}
+.message-wrapper:nth-child(even)::after {
+  right: 90.5%;
 }
 
 .chat-input-wrapper {
@@ -184,9 +180,9 @@
   justify-content: center;
 }
 
-@media all and (min-width: 300px) and (max-width: 500px) {
+@media all and (max-width: 500px) {
   .chat-box-wrapper {
-    left: 100 px;
+    left: 38px;
     width: 300px;
     padding-top: 10px;
   }
@@ -216,6 +212,7 @@
 
   .chats-area {
     width: 350px;
+    height: 385px;
   }
 }
 

@@ -22,7 +22,6 @@ const ChatArea = ({ addChat, chats, loading }) => {
     if (text !== '') {
       const chat = { text };
       chat.id = Date.now();
-      chat.type = 'User';
       chat.loading = false;
       addChat(chat);
       setText('');

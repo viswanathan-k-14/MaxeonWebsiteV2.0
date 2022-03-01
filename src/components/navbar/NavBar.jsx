@@ -40,19 +40,27 @@ const NavBar = () => {
             className={`flex-row ${toggle ? 'nav-menu-active' : 'nav-menu'} `}
           >
             <li>
-              <Link to='/'>Products</Link>
+              <Link className='nav-link' to='/'>
+                Products
+              </Link>
             </li>
             <li>
               {' '}
-              <Link to='/'>Features</Link>
+              <Link className='nav-link' to='/'>
+                Features
+              </Link>
             </li>
             <li>
               {' '}
-              <Link to='/'>Use Cases</Link>
+              <Link className='nav-link' to='/'>
+                Use Cases
+              </Link>
             </li>
             <li>
               {' '}
-              <Link to='/'>Pricing</Link>
+              <Link className='nav-link' to='/'>
+                Pricing
+              </Link>
             </li>
             <li>
               <Link

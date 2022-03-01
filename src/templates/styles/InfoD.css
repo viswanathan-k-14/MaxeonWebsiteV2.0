@@ -14,13 +14,11 @@
 
 .image-container-1 {
   display: flex;
-
   width: 50%;
 }
 
 .image-container-2 {
   display: flex;
-
   width: 50%;
 }
 #people1,
@@ -33,7 +31,6 @@
 
 #people3,
 #people4 {
-  width: 200px;
   height: 160px;
   border-radius: 10px;
   margin: 2px;
@@ -83,6 +80,11 @@
   color: var(--white);
   cursor: pointer;
   border: none;
+  transition: all 1s ease-in;
+}
+
+.play-btn:hover {
+  background: #3a4a83;
 }
 
 .play-btn img {

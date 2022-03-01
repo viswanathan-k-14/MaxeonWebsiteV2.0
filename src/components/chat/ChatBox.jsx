@@ -9,10 +9,6 @@ const ChatBox = ({ chatOpen }) => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    console.log('chat change');
-    console.log(chats);
-  }, [chats]);
-  useEffect(() => {
     if (loading === true) {
       setTimeout(() => {
         messageFromApi();
@@ -32,8 +28,7 @@ const ChatBox = ({ chatOpen }) => {
   async function messageFromApi() {
     const data = await fetch('https://api.adviceslip.com/advice');
     const chatData = await data.json();
-    let messageApi = { text: '', id: Date.now(), type: '', loading: true };
-    messageApi.type = 'Api';
+    let messageApi = { text: '', id: Date.now(), loading: true };
     setChats([...chats, messageApi]);
 
     setTimeout(() => {

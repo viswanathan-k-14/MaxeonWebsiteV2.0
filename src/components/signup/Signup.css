@@ -4,12 +4,6 @@
   font-size: 14px;
 }
 
-.overlay {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .form-wrapper {
   width: 450px;
   height: 550px;
@@ -84,7 +78,7 @@
   margin: 0px;
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 768px) {
   .form-submit {
     width: 300px;
   }

@@ -8,7 +8,7 @@ const Hero = (props) => {
     <header>
       <NavBar />
       <div className='hero-wrapper'>
-        <div className='text-wrapper container'>
+        <div className='text-wrapper'>
           {' '}
           <h1>
             {' '}

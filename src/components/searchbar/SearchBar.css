@@ -1,7 +1,6 @@
 .search-placeholder {
   position: absolute;
   width: 789px;
-  min-width: 350px;
   height: 98px;
   background: var(--white);
   bottom: -49px;

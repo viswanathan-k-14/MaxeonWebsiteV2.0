@@ -3,7 +3,7 @@ import './Modal.css';
 const Modal = (props) => {
   const ref = useRef();
   const handleExit = (e) => {
-    if (ref.current === e.target) {
+    if (ref.current === e.currentTarget) {
       props.toggle();
     }
   };

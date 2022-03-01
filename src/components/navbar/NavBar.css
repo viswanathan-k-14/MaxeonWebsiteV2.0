@@ -9,6 +9,18 @@
   align-items: baseline;
 }
 
+.logo-wrapper h1 {
+  color: var(--white);
+  margin-top: 20px;
+  font-family: var(--montserrat), sans-serif;
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 3rem;
+  text-align: left;
+  cursor: pointer;
+}
+
 .nav-menu {
   display: flex;
 }
@@ -20,28 +32,11 @@
 .nav-menu li a {
   font-family: var(--poppins), sans-serif;
   font-size: 1rem;
-  font-style: normal;
   font-weight: 400;
-  line-height: 19px;
+  line-height: 1rem;
   letter-spacing: 0px;
   text-align: left;
   color: var(--white);
-}
-
-.nav-menu-active {
-  display: none;
-}
-
-.logo-wrapper h1 {
-  color: var(--white);
-  margin-top: 20px;
-  font-family: var(--montserrat), sans-serif;
-  font-size: 2.2rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 48px;
-  text-align: left;
-  cursor: pointer;
 }
 
 .fa-bars {
@@ -54,6 +49,20 @@
   padding: 5px 20px;
   border-radius: 18px;
   background: var(--white);
+  transition: all 0.5s ease-out;
+}
+
+.btn.signup:hover {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+}
+
+.nav-link {
+  transition: border 0.1s ease-out;
+}
+.nav-link:hover {
+  border-bottom: 5px solid var(--white);
 }
 
 .mobile-menu-btn {
@@ -77,13 +86,20 @@
   .nav-menu {
     display: none;
   }
+
   .nav-menu-active {
     display: flex;
+    position: absolute;
+    overflow: hidden;
+    top: 68px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 50;
+    background: var(--hero-primary);
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    flex-direction: column;
-    min-width: 450px;
+    width: 100%;
     animation: nav 0.3s ease-in 1 forwards;
   }
   .nav-menu-active li {
@@ -93,10 +109,8 @@
   .nav-menu-active li a {
     font-family: var(--poppins), sans-serif;
     font-size: 1rem;
-    font-style: normal;
     font-weight: 400;
     line-height: 19px;
-    letter-spacing: 0px;
     text-align: left;
     color: var(--white);
   }
