@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
-import PreLoader from '../../images/preloader.gif';
+import Oval from '../../images/Oval.png';
+import Send1 from '../../images/send1.png';
 const ChatArea = ({ addChat, chats, loading }) => {
   const [text, setText] = useState('');
   const chatRef = useRef();
@@ -32,11 +33,25 @@ const ChatArea = ({ addChat, chats, loading }) => {
       <div className='chats-area' ref={chatRef}>
         {chats.map((chat) => {
           return (
-            <div key={chat.id} className='message-wrapper'>
-              <p className='message'>
-                {chat.loading ? <img src={PreLoader} alt='' /> : chat.text}
-              </p>
-            </div>
+            <>
+              <div
+                key={chat.id}
+                className={chat.loading ? 'load-wrapper' : 'message-wrapper'}
+              >
+                {chat.loading && <span className='.chat-profile'></span>}
+                <p className='message'>
+                  {chat.loading ? (
+                    <div className='preload'>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                  ) : (
+                    chat.text
+                  )}
+                </p>
+              </div>
+            </>
           );
         })}
       </div>
@@ -58,7 +73,11 @@ const ChatArea = ({ addChat, chats, loading }) => {
             onClick={handleChatSubmit}
             value=''
           >
-            <i className='fa-solid fa-paper-plane fa-2x'></i>
+            <img
+              src={Send1}
+              alt='send-blue'
+              style={{ width: '30px', height: '30px' }}
+            />
           </button>
         </form>
       )}

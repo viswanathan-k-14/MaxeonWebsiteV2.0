@@ -26,10 +26,19 @@
   margin-top: 25px;
 }
 
+.footer.cont {
+  max-width: 1580px;
+  padding: 0 1.5rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
 @media all and (max-width: 600px) {
   .footer {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+  }
+  .footer-wrapper {
+    height: 120px;
   }
 }

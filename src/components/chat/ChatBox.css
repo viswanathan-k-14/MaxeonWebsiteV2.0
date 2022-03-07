@@ -8,9 +8,9 @@
   height: 300px;
   bottom: 115px;
   right: 80px;
-  border-radius: 22px;
+  border-radius: 5px;
   background: var(--white);
-  box-shadow: 0px 0px 10px 0px var(--black);
+  box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.17397);
   z-index: 52;
   animation: chatMain 0.3s ease-in 1 forwards;
 }
@@ -25,7 +25,7 @@
 }
 
 .chat-lg {
-  padding-top: 20px;
+  padding-top: 10px;
   height: 600px;
   justify-content: space-between;
 }
@@ -33,23 +33,31 @@
 .greeting-container {
   display: flex;
   flex-direction: column;
-  background: var(--purple);
+  background: #7f8ac5;
   padding: 15px;
   margin: 0px 10px 10px 10px;
-  border-radius: 10px;
+  border-radius: 5px;
   color: var(--white);
 }
 
-.greeting-container h1,
+.greeting-container h1 {
+  font-family: var(--Montserrat);
+  font-weight: 500;
+  margin-left: 25px;
+  padding: 5px;
+}
+
 .conversation h3 {
+  font-family: var(--Montserrat);
+  font-weight: 500;
   margin-left: 40px;
   padding: 5px;
 }
 
 .greeting-container p {
   padding: 5px;
+  opacity: 0.6;
   width: 100%;
-  margin-left: 10px;
 }
 
 .greeting-container .btn {
@@ -59,9 +67,16 @@
 .conversation {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   margin: 0px 10px 10px 10px;
   height: 120px;
+}
+
+.conversation h3 {
+  margin-bottom: 5px;
+}
+
+.conversation p {
+  margin-bottom: 10px;
 }
 
 .con-btn {
@@ -69,12 +84,20 @@
   align-items: center;
   justify-content: center;
   border-radius: 20px;
-  padding: 5px 20px;
+  padding: 10px 20px;
   background: #13a884;
   color: var(--white);
   border: none;
   align-self: center;
   cursor: pointer;
+}
+
+.con-btn img {
+  /* border: 2px solid red; */
+  padding: 2px;
+  margin-left: 2px;
+  width: 22px;
+  height: 22px;
 }
 
 .fa-paper-plane {
@@ -92,7 +115,8 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  overflow-y: scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
   width: 390px;
   padding: 2px;
   margin: 0 auto;
@@ -105,7 +129,8 @@
   background: var(--darkPurple);
   width: 70%;
   padding: 10px 30px;
-  border-radius: 12px;
+  border-radius: 5px;
+  margin-right: 5px;
   color: var(--white);
   margin-bottom: 20px;
   animation: chatMain 0.3s ease-in 1 forwards;
@@ -116,13 +141,38 @@
   background: var(--lightPurple);
   align-self: flex-start;
   padding: 10px 30px;
-  border-radius: 10px;
+  border-radius: 5px;
+  margin-left: 40px;
   width: 70%;
   color: var(--black);
   margin-bottom: 20px;
   animation: chatMain 0.3s ease-in 1 forwards;
 }
 
+.load-wrapper {
+  position: relative;
+  background: var(--lightPurple);
+  align-self: flex-start;
+  padding: 10px 30px;
+  border-radius: 5px;
+  width: 30%;
+  margin-left: 40px;
+  margin-bottom: 20px;
+  animation: chatMain 0.3s ease-in 1 forwards;
+}
+.load-wrapper::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  z-index: -1;
+  left: 0%;
+  width: 0;
+  height: 0;
+  border-radius: 0px 0px 7px 0px;
+  border-bottom: 50px solid var(--lightPurple);
+  border-right: 50px solid transparent;
+  transform: rotate(90deg);
+}
 .message {
   text-align: left;
 }
@@ -132,29 +182,38 @@
   height: 80px;
 }
 
-.message-wrapper:nth-child(odd)::after,
+.message-wrapper:nth-child(odd)::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 94.3%;
+  width: 0;
+  height: 0;
+  border-radius: 0px 0px 7px 0px;
+  border-bottom: 30px solid var(--darkPurple);
+  border-right: 30px solid transparent;
+  transform: rotate(45deg);
+}
+
 .message-wrapper:nth-child(even)::after {
   content: '';
   position: absolute;
-  width: 20px;
-  height: 20px;
-
-  transform: rotate(45deg);
-  bottom: -5px;
-  background: inherit;
-}
-.message-wrapper:nth-child(odd)::after {
-  left: 89.5%;
-}
-.message-wrapper:nth-child(even)::after {
-  right: 90.5%;
+  bottom: -15px;
+  z-index: -1;
+  left: 0%;
+  width: 0;
+  height: 0;
+  border-radius: 0px 0px 7px 0px;
+  border-bottom: 50px solid var(--lightPurple);
+  border-right: 50px solid transparent;
+  transform: rotate(90deg);
 }
 
 .chat-input-wrapper {
   display: flex;
   justify-content: space-between;
   padding-left: 20px;
-  border-top: 0.5px solid gray;
+  border-top: 0.5px solid #979797;
 }
 
 .chat-input-wrapper input {
@@ -181,11 +240,68 @@
   justify-content: center;
 }
 
+.preload {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 150px;
+  height: 50px;
+}
+
+.preload span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+  background: #4c5aa1;
+  opacity: 1;
+  animation: fade 1.2s ease-in infinite;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.message-wrapper,
+.load-wrapper {
+  position: relative;
+}
+
+.message-wrapper:nth-child(even)::before,
+.load-wrapper::before {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #4c5aa1;
+}
+.chat-profile {
+  position: absolute;
+  left: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #4c5aa1;
+}
+
 @media all and (max-width: 500px) {
   .chat-box-wrapper {
     left: 38px;
     width: 300px;
-    padding-top: 10px;
   }
   .chat-box-wrapper.chat-lg {
     width: 350px;
@@ -198,17 +314,32 @@
   }
   .message-wrapper:nth-child(odd)::after {
     content: '';
-    left: 207px;
+    left: 93.621%;
   }
 
   .message-wrapper:nth-child(even)::after {
-    left: 5px;
+    left: 0%;
   }
 
-  .greeting-container h1,
+  .greeting-container h1 {
+    margin-left: 10px;
+  }
+
+  .greeting-container p {
+    width: 100%;
+    font-size: 14px;
+    text-align: left;
+    margin-left: 10px;
+  }
+
   .conversation h3 {
     margin-left: 20px;
     padding: 5px;
+  }
+
+  .conversation p {
+    width: 300px;
+    font-size: 14px;
   }
 
   .chats-area {
@@ -229,7 +360,7 @@
   }
   .message-wrapper:nth-child(odd)::after {
     content: '';
-    left: 170px;
+    left: 92.6%;
   }
 
   .chats-area {

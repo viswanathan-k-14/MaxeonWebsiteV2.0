@@ -3,6 +3,7 @@ import ChatArea from './ChatArea';
 import './ChatBox.css';
 import ChatConversation from './ChatConversation';
 import ChatGreetings from './ChatGreetings';
+import Send from '../../images/send.png';
 const ChatBox = ({ chatOpen }) => {
   const [chatStart, setChatStart] = useState(false);
   const [chats, setChats] = useState([]);
@@ -61,7 +62,7 @@ const ChatBox = ({ chatOpen }) => {
           <ChatGreetings />
           <ChatConversation>
             <button className='con-btn' onClick={handleClick}>
-              New Conversation <i className='fa-solid fa-paper-plane fa-1x'></i>
+              New Conversation <img src={Send} alt='send' />
             </button>
           </ChatConversation>
         </div>

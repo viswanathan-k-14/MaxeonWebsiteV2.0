@@ -1,6 +1,6 @@
 .search-placeholder {
   position: absolute;
-  width: 789px;
+  width: 900px;
   height: 98px;
   background: var(--white);
   bottom: -49px;
@@ -15,6 +15,11 @@
   width: 70%;
   margin: 0 auto;
   height: 100%;
+}
+
+.search-input::placeholder {
+  color: #444c58;
+  padding: 5px;
 }
 
 .search-input {
@@ -38,5 +43,8 @@
     height: 70px;
     transform: translateX(-50%);
     width: 350px;
+  }
+  .search-input::placeholder {
+    font-size: 16px;
   }
 }

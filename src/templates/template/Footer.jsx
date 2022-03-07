@@ -3,7 +3,7 @@ import '../styles/footer.css';
 const Footer = () => {
   return (
     <footer className='footer-wrapper'>
-      <div className='container footer'>
+      <div className='cont footer'>
         <div className='footer-content'>
           <p>
             Copyright &copy; maxeon Inc. 2018-19 |{' '}

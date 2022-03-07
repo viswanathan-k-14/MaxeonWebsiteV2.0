@@ -8,7 +8,7 @@ const SearchBar = () => {
         <input
           className='search-input'
           type='text'
-          placeholder='Search for Playlists'
+          placeholder='Search for Playlists, Albums or Songs'
         />
       </div>
     </div>

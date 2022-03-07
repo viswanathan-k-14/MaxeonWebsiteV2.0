@@ -9,14 +9,10 @@ const InfoD = () => {
   return (
     <article className='info-d-wrapper container'>
       <section className='image-group'>
-        <section className='image-container-1'>
-          <img src={People1} id='people1' alt='' />
-          <img src={People2} id='people2' alt='' />
-        </section>
-        <section className='image-container-2'>
-          <img src={People3} id='people3' alt='' />
-          <img src={People4} id='people4' alt='' />
-        </section>
+        <img src={People1} id='people1' alt='' />
+        <img src={People4} id='people4' alt='' />
+        <img src={People2} id='people2' alt='' />
+        <img src={People3} id='people3' alt='' />
       </section>
       <section className='info-d-2'>
         <h1>

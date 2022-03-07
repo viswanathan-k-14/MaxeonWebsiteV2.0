@@ -2,7 +2,7 @@
   width: 100vw;
   height: 459px;
   display: flex;
-  justify-content: space-around;
+  gap: 100px;
   background: var(--hero-primary);
 }
 
@@ -55,14 +55,13 @@
 }
 .quote-wrapper {
   display: flex;
-  justify-content: space-around;
+  gap: 100px;
 }
 
 .quote img {
-  width: 1.1rem;
-  height: 1.1rem;
+  width: 1.5rem;
+  height: 1.5rem;
   margin-right: 5px;
-  background: var(--white);
   border-radius: 50%;
   padding: 2px;
 }
@@ -70,6 +69,7 @@
 @media all and (max-width: 960px) {
   .info-e-wrapper {
     flex-direction: column;
+    height: fit-content;
   }
   .quote p {
     font-size: 0.9rem;
@@ -80,5 +80,8 @@
   .rocket-image img {
     width: 260px;
     height: 260px;
+  }
+  .info-e-content {
+    margin: 0 auto;
   }
 }

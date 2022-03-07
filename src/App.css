@@ -2,11 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&family=Montserrat:wght@700&display=swap');
 
 :root {
-  --black: #333;
+  --black: #000;
   --white: #fff;
   --purple: #6174b9;
   --darkPurple: #4c5aa1;
-  --lightPurple: #a4b0ea;
+  --lightPurple: #e0e3f0;
   --hero-primary: #a1aaba;
   --poppins: 'Poppins';
   --montserrat: 'Montserrat';
@@ -40,7 +40,7 @@ ul {
 }
 
 ::-webkit-scrollbar {
-  width: 0.8em;
+  width: 0.5em;
 }
 
 ::-webkit-scrollbar-track {
@@ -58,6 +58,10 @@ ul {
   padding: 0 1.5rem;
   margin: 0 auto;
   overflow: hidden;
+}
+
+.divider-lg {
+  margin-bottom: 150px;
 }
 
 .divider {

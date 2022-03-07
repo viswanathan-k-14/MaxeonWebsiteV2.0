@@ -2,11 +2,20 @@
   background: var(--hero-primary);
   width: 100vw;
 }
-
-.navbar .container {
+.navbar-lg {
+  background: transparent;
+  width: 100vw;
+  height: 90px;
+  position: absolute;
+  z-index: 1;
+  top: 35px;
+}
+.navbar .container,
+.navbar-lg .container {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  max-width: 1550px;
 }
 
 .logo-wrapper h1 {
@@ -26,7 +35,7 @@
 }
 
 .nav-menu li {
-  padding: 20px;
+  padding: 30px;
 }
 
 .nav-menu li a {
@@ -45,9 +54,10 @@
 
 .btn.signup {
   color: var(--black);
-  font-weight: 400;
-  padding: 5px 20px;
+  font-weight: 600;
+  padding: 6px 25px;
   border-radius: 18px;
+  font-size: 14px;
   background: var(--white);
   transition: all 0.5s ease-out;
 }
@@ -67,6 +77,10 @@
 
 .mobile-menu-btn {
   display: none;
+}
+
+.logo-wrapper h1 {
+  width: 100%;
 }
 
 @media all and (max-width: 960px) {

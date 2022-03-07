@@ -8,7 +8,7 @@ const ImageSection = ({ imgPos }) => {
         <>
           <section className='image-section-1'>
             {' '}
-            <img src={Aside} alt='' />
+            <img style={{ marginLeft: '0px' }} src={Aside} alt='' />
           </section>
           <section className='image-about'>
             {' '}

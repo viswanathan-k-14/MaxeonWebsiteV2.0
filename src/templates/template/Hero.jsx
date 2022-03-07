@@ -1,11 +1,11 @@
 import React from 'react';
 import NavBar from '../../components/navbar/NavBar';
 import SearchBar from '../../components/searchbar/SearchBar';
-import HeroImage from '../../images/hero.png';
+import HeroImage from '../../images/hero3.png';
 import '../styles/Hero.css';
 const Hero = (props) => {
   return (
-    <header>
+    <header className='main-header'>
       <NavBar />
       <div className='hero-wrapper'>
         <div className='text-wrapper'>
@@ -18,9 +18,9 @@ const Hero = (props) => {
             <br /> speaks.
           </h1>
         </div>
-        <div className='image-wrapper'>
-          <img src={HeroImage} alt='' />
-        </div>
+
+        <img src={HeroImage} className='hero-image' alt='hero' />
+
         <SearchBar />
         {props.children}
       </div>

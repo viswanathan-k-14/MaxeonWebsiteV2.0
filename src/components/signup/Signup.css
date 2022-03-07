@@ -5,24 +5,25 @@
 }
 
 .form-wrapper {
-  width: 450px;
-  height: 550px;
+  width: 550px;
+  height: 650px;
   margin-top: 120px;
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   background: var(--white);
   padding: 20px;
-  border-radius: 20px;
+  border-radius: 5px;
 }
 
 .form-header {
   display: inline;
   width: 90px;
   text-align: left;
-  margin-left: 60px;
-  padding-bottom: 5px;
+  margin-left: 55px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
   border-bottom: 5px solid var(--black);
 }
 .signup-form {
@@ -34,13 +35,13 @@
 }
 
 .form-cntrl {
-  width: 300px;
+  width: 400px;
   padding: 20px 35px;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
   height: 20px;
   background: #f2f2f2;
   border: none;
-  border-radius: 20px;
+  border-radius: 4px;
 }
 
 .form-cntrl:focus {
@@ -49,19 +50,22 @@
 
 .form-submit {
   display: block;
-  width: 300px;
+  width: 400px;
   background: var(--purple);
   cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
   color: var(--white);
-  padding: 10px 30px;
+  padding: 15px 30px;
   border: none;
+  margin-top: 18px;
   margin-bottom: 10px;
-  border-radius: 22px;
+  border-radius: 4px;
 }
 
 .form-wrapper p {
-  font-size: 14px;
-  width: 350px;
+  font-size: 12px;
+  width: 450px;
 }
 
 .close {
@@ -84,12 +88,17 @@
   }
   .form-wrapper {
     width: 350px;
+    height: 600px;
   }
   .form-wrapper p {
     font-size: 14px;
     width: 300px;
   }
+  .form-cntrl {
+    width: 300px;
+  }
   .form-header {
-    margin-left: 10px;
+    margin-left: 5px;
+    margin-bottom: 30px;
   }
 }

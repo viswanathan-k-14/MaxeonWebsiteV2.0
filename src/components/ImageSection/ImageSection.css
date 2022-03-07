@@ -1,6 +1,7 @@
 .image-section-wrapper {
   display: flex;
   justify-content: space-between;
+  gap: 50px;
 }
 
 .image-section-1 img {
@@ -13,8 +14,9 @@
   font-size: 2rem;
   font-style: normal;
   font-weight: 700;
+  color: #444c58;
   line-height: 46px;
-  text-align: justify;
+  text-align: left;
   margin-bottom: 30px;
   width: 100%;
 }
@@ -24,15 +26,17 @@
   font-size: 1rem;
   font-style: normal;
   font-weight: 300;
+  color: #444c58;
   line-height: 30px;
-  text-align: justify;
-  height: 100%;
+  text-align: left;
   width: 100%;
 }
 
 .image-about {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 @media all and (max-width: 960px) {

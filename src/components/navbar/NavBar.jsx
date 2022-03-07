@@ -6,6 +6,20 @@ import './NavBar.css';
 const NavBar = () => {
   const [toggle, setToggle] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [size, setSize] = useState('');
+  useEffect(() => {
+    if (window.innerWidth <= 960) {
+      setSize('small');
+    } else {
+      setSize('large');
+    }
+  }, []);
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     if (isModalOpen === true) {
@@ -14,23 +28,22 @@ const NavBar = () => {
       document.querySelector('body').style.overflow = 'scroll';
     }
   }, [isModalOpen]);
+
   const handleResize = () => {
     if (window.innerWidth >= 960) {
       setToggle(false);
+      document.querySelector('nav').className = 'navbar-lg';
+    } else {
+      document.querySelector('nav').className = 'navbar';
     }
   };
-  window.addEventListener('resize', handleResize);
 
   const handleToggle = (e) => {
     setToggle(!toggle);
   };
 
-  const closeModal = (e) => {
-    setIsModalOpen(false);
-  };
-
   return (
-    <nav className='navbar'>
+    <nav className={size === 'large' ? 'navbar-lg' : 'navbar'}>
       <div className='container'>
         <div className='logo-wrapper'>
           <h1>Maxeon</h1>
@@ -65,7 +78,11 @@ const NavBar = () => {
             <li>
               <Link
                 className='btn signup'
-                onClick={() => setIsModalOpen(true)}
+                onClick={() => {
+                  // let modal = document.querySelector('.modal-close');
+                  // modal.className = 'modal-container';
+                  setIsModalOpen(true);
+                }}
                 to='/'
               >
                 SignUp
@@ -82,11 +99,7 @@ const NavBar = () => {
         </div>
       </div>
       <Modal open={isModalOpen} toggle={() => setIsModalOpen(false)}>
-        <Signup>
-          <button className='close' onClick={closeModal}>
-            <i className='fa fa-times fa-3x'></i>
-          </button>
-        </Signup>
+        <Signup></Signup>
       </Modal>
     </nav>
   );

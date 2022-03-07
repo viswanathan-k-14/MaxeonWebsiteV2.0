@@ -26,8 +26,12 @@
 .chat-symbol span {
   position: absolute;
   color: var(--black);
-  font-size: 1.8rem;
   right: 20px;
+}
+
+.chat-symbol span img {
+  width: 25px;
+  height: 25px;
 }
 
 .chat-icon:hover {

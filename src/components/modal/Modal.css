@@ -4,6 +4,7 @@
   justify-content: center;
   width: 100vw;
   position: absolute;
+  margin-top: -35px;
   top: 0;
   height: 200vh;
   overflow: none;
@@ -22,6 +23,26 @@
   }
 }
 
-.modal-container.modal-close {
+.modal-close {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100vw;
+  position: absolute;
   top: -200vh;
+  height: 200vh;
+  overflow: none;
+  background: rgba(63, 61, 61, 0.692);
+  z-index: 90;
+  transition: top 1s ease-in;
+  animation: moveout 1s ease-in;
+}
+
+@keyframes moveout {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -200vh;
+  }
 }

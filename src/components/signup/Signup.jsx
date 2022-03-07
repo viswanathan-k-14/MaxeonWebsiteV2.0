@@ -34,9 +34,10 @@ const Signup = (props) => {
             placeholder='Re-enter password'
           />
         </div>
-        <button className='form-submit'>SignUp</button>
+        <button className='form-submit'>Sign Up</button>
         <p>
-          By signing up you agree to our terms of service and privacy policy
+          By signing up you agree to our terms of services &amp; privacy
+          policies
         </p>
       </form>
       {props.children}
